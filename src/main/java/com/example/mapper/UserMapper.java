@@ -11,4 +11,5 @@ import com.example.model.User;
 @Mapper
 public interface UserMapper {
 	User getById(String id);
+	
 }
