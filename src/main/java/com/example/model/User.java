@@ -1,7 +1,5 @@
 package com.example.model;
 
-import java.util.Date;
-
 /**
  * @author Jin.D
  * @date: 2018年3月15日 上午10:03:26
