@@ -1,7 +1,11 @@
 package com.example.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.example.mapper.UserMapper;
+import com.example.model.User;
 
 /**
  * @author Jin.D
@@ -11,8 +15,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/")
 public class ComputeController {
+
+	@Autowired
+	UserMapper userMapper;
+
 	@RequestMapping("/")
 	public String home() {
-		return "Hello";
+		User user = userMapper.getById("1");
+		return user.toString();
 	}
 }
