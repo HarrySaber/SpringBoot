@@ -1,6 +1,7 @@
 package com.example.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,11 +18,21 @@ import com.example.model.User;
 public class ComputeController {
 
 	@Autowired
-	UserMapper userMapper;
+	private StringRedisTemplate stringRedisTemplate;
+
+
+	@Autowired
+	private UserMapper userMapper;
 
 	@RequestMapping("/")
 	public String home() {
 		User user = userMapper.getById("1");
 		return user.toString();
+	}
+
+	@RequestMapping("/redisHandler")
+	public String redisHandler(){
+		stringRedisTemplate.opsForValue().set("k5", "Springboot redis");
+		return stringRedisTemplate.opsForValue().get("k5");
 	}
 }
