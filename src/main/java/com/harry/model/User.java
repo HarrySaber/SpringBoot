@@ -1,4 +1,4 @@
-package com.example.model;
+package com.harry.model;
 
 /**
  * @author Jin.D

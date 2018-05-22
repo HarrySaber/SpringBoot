@@ -1,14 +1,12 @@
-package com.example.controller;
+package com.harry.controller;
 
-import cn.starpost.event.rabbitmq.RabbitMQEventBus;
-import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.mapper.UserMapper;
-import com.example.model.User;
+import com.harry.mapper.UserMapper;
+import com.harry.model.User;
 import org.springframework.web.servlet.ModelAndView;
 
 /**

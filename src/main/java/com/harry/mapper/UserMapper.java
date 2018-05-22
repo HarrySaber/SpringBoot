@@ -1,4 +1,4 @@
-package com.example.mapper;
+package com.harry.mapper;
 /** 
 * @author  Jin.D 
 * @date: 2018年3月15日 上午10:02:39 
@@ -6,7 +6,7 @@ package com.example.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 
-import com.example.model.User;
+import com.harry.model.User;
 
 @Mapper
 public interface UserMapper {
